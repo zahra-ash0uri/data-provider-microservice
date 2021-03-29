@@ -1,5 +1,4 @@
 from dao.mongo.mongo_adapter import MongoAdapter
-from dao.redis.redis_adapter import RedisAdapter
 import csv
 
 
@@ -21,3 +20,7 @@ def init_db():
     mongo_adapter.insert_many(documents)
     mongo_adapter.create_index_on_field(filed='ad_id')
     print("Initialized successfully!")
+
+
+if __name__ == '__main__':
+    init_db()
