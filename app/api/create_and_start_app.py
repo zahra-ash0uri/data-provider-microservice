@@ -4,6 +4,7 @@ from tornado.web import Application
 from tornado.ioloop import IOLoop
 from api.view.get_estimated_cvr import GetEstimatedCVR
 from api.view.get_stats import GetStats
+from api.view.dashboard import Dashboard
 from config.runtime_config import RuntimeConfig
 
 
@@ -13,7 +14,8 @@ define('port', default=RuntimeConfig.APP_PORT, help='port to listen on')
 def create_and_start_app():
     app = Application([
         ('/predict', GetEstimatedCVR),
-        ('/stats', GetStats)
+        ('/stats', GetStats),
+        ('/dashboard', Dashboard)
     ],
         debug=RuntimeConfig.DEBUG_MODE)
     http_server = HTTPServer(app)

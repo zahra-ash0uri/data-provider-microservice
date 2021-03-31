@@ -67,21 +67,10 @@ class MongoAdapter:
 
 if __name__ == '__main__':
     import pandas as pd
-    from datetime import datetime
     import json
 
     a = MongoAdapter()
-    # d = a.system_requests_status_dataframe
-    # print(d, '\n*******')
-    # fr = 1.617023 * (10**9)
-    # to = 1.617037 * (10**9)
-    #
-    # d2 = d[(fr <= d["received_at"]) & (d["received_at"] < to)]
-    # print(d2)
-    # print("count", d['received_at'].count())
-    # print("avg", d['response_time'].mean())
-    # print("99 percentile", d['response_time'].quantile(q=0.99))
-
+    d = a.system_requests_status_dataframe
     # c = a.retrieve_all()
     # cnt = 0
     # for d in c:
