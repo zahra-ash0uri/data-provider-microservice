@@ -1,0 +1,12 @@
+venv/
+venv
+.idea/
+.idea
+__pycache/
+*/__pycache
+*/__pycache/
+*/__pycache*
+__pycache*
+*.swp
+*.pyc
+.env
